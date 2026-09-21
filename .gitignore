@@ -1,0 +1,67 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+release/
+*.tgz
+
+# Runtime data
+agent-z-data/
+*.log
+logs/
+
+# Model files (too large for git)
+*.gguf
+*.bin
+models/
+resources/models/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temp
+temp/
+tmp/
+*.tmp
+*.bak
+
+# Electron
+out/
+.electron/
+*.map
+
+# Archives
+*.7z
+*.zip
+*.rar
+*.tar.gz
+
+# Windows
+*.exe
+!Z.exe
+*.dll
+!resources/llama-server/*.dll
+
+# Scripts temp
+staging/
+staging.7z
+*.ps1
+!scripts/*.ps1
