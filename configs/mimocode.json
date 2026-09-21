@@ -1,0 +1,43 @@
+{
+  "$schema": "https://mimo.xiaomi.com/mimocode/config.json",
+  "model": "ollama/llama3.2",
+  "provider": {
+    "ollama": {
+      "name": "Ollama",
+      "baseURL": "http://localhost:11434",
+      "models": {
+        "llama3.2": { "name": "Llama 3.2" },
+        "qwen2.5": { "name": "Qwen 2.5" },
+        "deepseek-v4": { "name": "DeepSeek V4" }
+      }
+    },
+    "glm": {
+      "name": "智谱GLM",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "https://open.bigmodel.cn/api/paas/v4",
+        "apiKey": "YOUR_API_KEY"
+      },
+      "models": {
+        "glm-4.5-flash": { "name": "GLM-4.5-Flash（免费）" },
+        "glm-5.2": { "name": "GLM-5.2" }
+      }
+    }
+  },
+  "compaction": {
+    "max_context": {
+      "ollama/*": "128K",
+      "glm/*": "128K"
+    }
+  },
+  "checkpoint": {
+    "enabled": true,
+    "interval_percent": [20, 45, 70]
+  },
+  "memory": {
+    "project_memory": "MEMORY.md",
+    "session_checkpoint": "checkpoint.md",
+    "scratch_notes": "notes.md",
+    "task_progress": "tasks/"
+  }
+}
